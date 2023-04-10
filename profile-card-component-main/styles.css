@@ -1,0 +1,126 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
+:root {
+  --bg-dark-cyan: hsl(185, 75%, 39%);
+  --bg-dark-blue: hsl(229, 23%, 23%);
+  --bg-grayish-blue: hsl(227, 10%, 46%);
+  --bg-dark-gray: hsl(0, 0%, 59%);
+  --bg-white: hsl(0, 0%, 100%);
+}
+*,
+*::before,
+::after {
+  box-sizing: border-box;
+}
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+}
+html {
+  font-size: 62.5%;
+}
+body {
+  width: 100%;
+  background-color: var(--bg-dark-cyan);
+  font-family: "Kumbh Sans", sans-serif;
+  overflow: hidden;
+}
+img {
+  display: block;
+  max-width: 100%;
+}
+.container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.card {
+  height: 420px;
+  background-color: var(--bg-white);
+  border-radius: 1rem;
+  overflow: hidden;
+}
+.pattern-top {
+  position: absolute;
+  top: -30%;
+  left: -20%;
+  z-index: -1;
+}
+.pattern-bottom {
+  position: absolute;
+  right: -20%;
+  bottom: -30%;
+  z-index: -1;
+}
+.profile-pic img {
+  position: relative;
+  display: block;
+  border-radius: 50%;
+  top: -5.5rem;
+  right: -12rem;
+}
+.numbers {
+  display: flex;
+  justify-content: space-around;
+}
+.main h1 {
+  margin-bottom: 1rem;
+}
+.main h1,
+.main p {
+  text-align: center;
+}
+.main p {
+  font-size: 1.6rem;
+  color: var(--bg-grayish-blue);
+  font-weight: 400;
+}
+.hr {
+  margin-top: 2rem;
+  height: 1px;
+  background-color: var(--bg-dark-gray);
+}
+.followers p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.main h1,
+.followers p:first-child,
+.likes p:first-child,
+.photos p:first-child {
+  font-size: 2rem;
+  color: var(--bg-dark-blue);
+  font-weight: 700;
+}
+
+.numbers {
+  margin-top: 3rem;
+}
+.main span {
+  color: var(--bg-dark-gray);
+  font-weight: 400;
+}
+.followers p:nth-child(2),
+.likes p:nth-child(2),
+.photos p:nth-child(2) {
+  font-size: 1.3rem;
+  letter-spacing: 2px;
+  color: var(--bg-dark-gray);
+  font-weight: 400;
+}
+@media screen and (max-width: 375px) {
+  .pattern-top {
+    position: absolute;
+    top: -70%;
+    left: -190%;
+  }
+  .pattern-bottom {
+    position: absolute;
+    right: -70%;
+    bottom: -50%;
+    z-index: -1;
+  }
+}
